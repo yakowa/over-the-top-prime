@@ -1,3 +1,18 @@
+function getDataForButton() {
+    var lower = document.querySelector('#lower').value;
+    var upper = document.querySelector('#upper').value;
+    checkPrimeRange(lower, upper)
+    var SFXprime = new sound("SFX 1.wav", false);
+    SFXprime.play()
+}
+
+function addPrime(primeNumber) {
+    var primes = document.querySelector('#primes');
+    let newLi = document.createElement('li');
+    newLi.innerText = primeNumber;
+    primes.appendChild(newLi);
+}
+
 function checkPrimeRange(lowerBound, UpperBound) {
     var notPrime = false;
 
@@ -11,10 +26,41 @@ function checkPrimeRange(lowerBound, UpperBound) {
         }
         if (!notPrime) {
             console.log(i, 'prime')
+            addPrime(i)
         }
         notPrime = false;
     }
 
 }
 
-checkPrimeRange(2, 15)
+
+// Making sound effects or music that can be played
+function sound(src, repeat) {
+    // Creating an audio tag
+    this.sound = document.createElement("audio");
+    // Setting the source
+    this.sound.src = src;
+    // Setting preload to auto
+    this.sound.setAttribute("preload", "auto");
+    // Disabling controls
+    this.sound.setAttribute("controls", "none");
+    // Making the audio tag not render on the page (not canvas)
+    this.sound.style.display = "none";
+    // Add the sound tag to the HTML body
+    document.body.appendChild(this.sound);
+    // Play function for this sound effect
+    this.play = function() {
+        // Play the sound
+        this.sound.play();
+        // If repeating is true
+        if (repeat) {
+            // Set repeat to true
+            this.sound.loop = true;
+        }
+    }
+    // Stop function for this sound effect
+    this.stop = function() {
+        // Pause the sound
+        this.sound.pause();
+    }
+}
