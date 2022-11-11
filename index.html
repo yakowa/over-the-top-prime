@@ -11,7 +11,7 @@
 <body>
 
     <main>
-        <h1>Over The Top Prime Checker</h1>
+        <h1>Over The Top <span class="coloured">Prime Checker</span></h1>
     
         <inputs>
             <h3>from</h3>
@@ -22,9 +22,16 @@
             <button id="go" onclick="getDataForButton()">Go!</button>
         </inputs>
     </main>
-    <main>
-        <ul id="primes"></ul>
-    </main>
+    <results>
+        <section>
+            <h3 id="primeLabel" style="display: none;">Prime</h3>
+            <ul id="primes"></ul>
+        </section>
+        <section>
+            <h3 id="notPrimeLabel" style="display: none;">Not Prime</h3>
+            <ul id="notPrimes"></ul>
+        </section>
+    </results>
 
 </body>
 </html>

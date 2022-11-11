@@ -1,4 +1,11 @@
 function getDataForButton() {
+    // Remove children nodes from #primes
+    var primes = document.querySelector('#primes').innerHTML = "";
+
+    // Display Reslts Table
+    document.querySelector('#notPrimeLabel').style.display = "block";
+    document.querySelector('#primeLabel').style.display = "block";
+
     var lower = document.querySelector('#lower').value;
     var upper = document.querySelector('#upper').value;
     checkPrimeRange(lower, upper)
@@ -12,6 +19,12 @@ function addPrime(primeNumber) {
     newLi.innerText = primeNumber;
     primes.appendChild(newLi);
 }
+function addNotPrime(notPrimeNumber) {
+    var notPrimes = document.querySelector('#notPrimes');
+    let newLi = document.createElement('li');
+    newLi.innerText = notPrimeNumber;
+    notPrimes.appendChild(newLi);
+}
 
 function checkPrimeRange(lowerBound, UpperBound) {
     lowerBound = parseInt(lowerBound)
@@ -22,6 +35,7 @@ function checkPrimeRange(lowerBound, UpperBound) {
         for (let j = 2; j <= i/2; j++) {
             if ((i % j) == 0) {
                 console.log(i, 'not prime', j, i/j);
+                addNotPrime(i)
                 notPrime = true;
                 break;
             }

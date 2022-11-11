@@ -19,6 +19,7 @@ h1 {
     font-size: 3.5rem;
     text-align: center;
 }
+.coloured { color: #4848cd; }
 
 inputs {
     display: flex;
@@ -67,4 +68,39 @@ inputs > button:hover, inputs > button:focus {
 }
 
 ul { list-style-type: none; }
-li { font-size: 1.4rem; }
+li {
+    font-size: 1.4rem;
+    animation: al-fade-up 100ms ease-in-out 0ms forwards;
+}
+
+results {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+}
+results section { width: 50%; }
+
+
+@-webkit-keyframes al-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes al-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
