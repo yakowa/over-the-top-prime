@@ -1,6 +1,7 @@
 function getDataForButton() {
     // Remove children nodes from #primes
     var primes = document.querySelector('#primes').innerHTML = "";
+    var primes = document.querySelector('#notPrimes').innerHTML = "";
 
     // Display Reslts Table
     document.querySelector('#notPrimeLabel').style.display = "block";
@@ -46,9 +47,7 @@ function checkPrimeRange(lowerBound, UpperBound) {
         }
         notPrime = false;
     }
-
 }
-
 
 // Making sound effects or music that can be played
 function sound(src, repeat) {
