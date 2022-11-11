@@ -14,6 +14,8 @@ function addPrime(primeNumber) {
 }
 
 function checkPrimeRange(lowerBound, UpperBound) {
+    lowerBound = parseInt(lowerBound)
+    UpperBound = parseInt(UpperBound)
     var notPrime = false;
 
     for (let i = lowerBound; i <= UpperBound; i++) {
@@ -24,7 +26,7 @@ function checkPrimeRange(lowerBound, UpperBound) {
                 break;
             }
         }
-        if (!notPrime) {
+        if (!notPrime && !(i == 1)) {
             console.log(i, 'prime')
             addPrime(i)
         }
