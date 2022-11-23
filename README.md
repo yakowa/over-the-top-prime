@@ -1,4 +1,4 @@
-1![JacobEM](https://jacobem.com/assets/media/JacobEM.png)
+![JacobEM](https://jacobem.com/assets/media/JacobEM.png)
 
 
 # Over The Top Prime
