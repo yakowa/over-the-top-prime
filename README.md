@@ -5,7 +5,7 @@
 
 A really over-engineered prime generator. Animations & Sound effects are fun! Collab. with Dermo9.
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.1.0-00e0a7)
+![Version: 1.3.0](https://img.shields.io/badge/Version-1.3.0-00e0a7)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-776bff)
 
